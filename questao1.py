@@ -15,12 +15,12 @@ def verificarparenteses(exp):
             p.inserir(i)
         elif i == ')':
             p.remover()
-            print('Parênteses balanceados.')
-        else:
-            print('Parênteses não balanceados.')
-    while not p.is_empty():
-        expressao.append(p.remover())
-    return ''.join(expressao)
+            
+    if p.is_empty():
+        print('Parênteses balanceados.')
+    else:
+        print('Parênteses não balanceados.')
+    return p.is_empty()
 
 s = str(input('Expressão: '))
 verificarparenteses(s)
