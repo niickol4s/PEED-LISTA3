@@ -14,7 +14,7 @@ def verificarparenteses(exp):
         elif i == '(':
             p.inserir(i)
         elif i == ')':
-            p.inserir(i)
+            p.remover()
             print('Parênteses balanceados.')
         else:
             print('Parênteses não balanceados.')
