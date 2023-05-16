@@ -6,16 +6,17 @@ from pilha import Pilha
 def strnumeroparadecimal(strnumero):
     p = Pilha()
     
-    for i in strnumero:
-        if i.isnumeric():
-            int(i)
-            p.inserir(i)
-        else:
-            IndexError('Valor inválido.')
+    for i in range(len(strnumero) -1, -1, -1):
+        
+        if strnumero[i].isnumeric():
+            p.inserir(int(strnumero[i]))
+        
     return p
 
 strnumero = input('Valor: ')
 numeroDecimal = strnumeroparadecimal(strnumero)
 
 while not numeroDecimal.is_empty():
-    print(numeroDecimal.remover(), end=' ')
+    print(numeroDecimal.remover(), end='')
+    
+    
