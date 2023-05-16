@@ -21,17 +21,16 @@ def decimalparahexadecimal(qct):
                 p.inserir('E')
             case 15:
                 p.inserir('F')
+            case _:
+                p.inserir(resto)
                 
         qct = qct // 16
-        
-        if resto < 0:
-            p.inserir(resto)
-    
+            
     return p
 
 valor = int(input('Valor: '))
 valorHexadecimal = decimalparahexadecimal(valor)
 
 while not valorHexadecimal.is_empty():
-    print(valorHexadecimal.remover(), end=' ')
+    print(valorHexadecimal.remover(), end='')
     
